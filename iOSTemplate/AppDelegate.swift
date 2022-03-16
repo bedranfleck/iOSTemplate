@@ -7,7 +7,7 @@
 
 import UIKit
 
-@main
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let viewController = ViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
-        
+
         window = UIWindow()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
@@ -39,4 +39,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
