@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,15 +18,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         
-        let viewController = ViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .notDetermined, .authorized:
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    DispatchQueue.main.async {
+                        let qrReaderController = QRReaderViewController()
+                        
+                        guard UIImagePickerController.isSourceTypeAvailable(.camera),
+                        let availableMediaTypes = UIImagePickerController.availableMediaTypes(for: .camera) else {
+                            return
+                        }
+                        
+                        qrReaderController.sourceType = .camera
+                        qrReaderController.mediaTypes = availableMediaTypes
+                        qrReaderController.allowsEditing = true
+                        
+                        let navigationController = UINavigationController(rootViewController: qrReaderController)
+                        
+                        self.tabBarController = UITabBarController()
+                        self.tabBarController?.tabBar.backgroundColor = UIColor(named: "pelps")
+                        self.tabBarController?.tabBar.tintColor = .black
+                        self.tabBarController?.setViewControllers([navigationController], animated: false)
+                        
+                        self.window?.rootViewController = self.tabBarController
+                    }
+                }
+            }
+            
+        case .restricted, .denied:
+            break
+        }
         
-        tabBarController = UITabBarController()
-        tabBarController?.tabBar.backgroundColor = UIColor(named: "pelps")
-        tabBarController?.tabBar.tintColor = .black
-        tabBarController?.setViewControllers([navigationController], animated: false)
-        
-        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
     }

@@ -15,6 +15,7 @@
 		5B00004127DF8DE200DF78CA /* iOSTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00004027DF8DE200DF78CA /* iOSTemplateTests.swift */; };
 		5B00004B27DF8DE200DF78CA /* iOSTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00004A27DF8DE200DF78CA /* iOSTemplateUITests.swift */; };
 		5B00004D27DF8DE200DF78CA /* iOSTemplateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00004C27DF8DE200DF78CA /* iOSTemplateUITestsLaunchTests.swift */; };
+		5B7559AD27EA7E190069C558 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7559AC27EA7E190069C558 /* QRReaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5B00004627DF8DE200DF78CA /* iOSTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B00004A27DF8DE200DF78CA /* iOSTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTemplateUITests.swift; sourceTree = "<group>"; };
 		5B00004C27DF8DE200DF78CA /* iOSTemplateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTemplateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5B7559AC27EA7E190069C558 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				5B00003227DF8DE200DF78CA /* Assets.xcassets */,
 				5B00003427DF8DE200DF78CA /* LaunchScreen.storyboard */,
 				5B00003727DF8DE200DF78CA /* Info.plist */,
+				5B7559AC27EA7E190069C558 /* QRReaderViewController.swift */,
 			);
 			path = iOSTemplate;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B7559AD27EA7E190069C558 /* QRReaderViewController.swift in Sources */,
 				5B00002E27DF8DDF00DF78CA /* ViewController.swift in Sources */,
 				5B00002A27DF8DDF00DF78CA /* AppDelegate.swift in Sources */,
 				5B00002C27DF8DDF00DF78CA /* SceneDelegate.swift in Sources */,
@@ -425,14 +429,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4Y65A32PZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSTemplate/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = SPY;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = LEAK;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,6 +449,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GeyTechTraining.iOSTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,14 +461,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4Y65A32PZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSTemplate/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = SPY;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = LEAK;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +481,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GeyTechTraining.iOSTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
