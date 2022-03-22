@@ -20,6 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
+        //adicionando o tab bar / icones e nome do icone
+//        navigationController.tabBarItem.title  = "Camera"
+//        navigationController.tabBarItem.image = UIImage(systemName: "camera")
+//
+//        //troca para a tela dessa tab
+//        let tabBar = UITabBarController()
+//        tabBar.viewControllers = [navigationController] //aqui eu preciso colocar todas as janelas que vao aparecer
+//        window?.rootViewController = tabBar //chama a tabbar pra a tela
+        
         return true
     }
 
