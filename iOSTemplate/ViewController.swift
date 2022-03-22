@@ -18,8 +18,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func newButton(_ sender: Any) {
-        print("Oh caralho")
+        //ao clicar no button em tela exibe no console o Hello World
+        print("Hello World")
     }
+
     
 }
 
